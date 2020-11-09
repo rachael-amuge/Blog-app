@@ -1,0 +1,7 @@
+{% extends 'blog/base.html' %} {% if newuser %}
+<form action="% url 'edit' newuser.id%" method="post">
+    <h2>check {{newuser.name}} </h2>
+    {% crsf_token %} {{editform}}
+    <input type="submit" value="check">
+</form>
+{{% endif %}} {% endblock %}
